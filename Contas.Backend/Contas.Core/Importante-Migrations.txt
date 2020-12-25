@@ -1,0 +1,14 @@
+﻿
+Rodar o Scaffold para gerar as classes lendo uma base já existente
+dotnet ef dbcontext scaffold "Server=localhost;Database=database;Uid=root;Pwd=root" "MySql.Data.EntityFrameworkCore" -o Models --project .\NomeProjeto.Core
+dotnet ef migrations add NOME_DA_MIGRATION --project .\NomeProjeto.Core
+
+dotnet ef database update --project .\NomeProjeto.Core
+
+ // dotnet ef migrations add tabelaInformativos --project ./Contas.Backend/Contas.Core --startup-project ./Contas.Backend/Contas.Api
+// dotnet ef database update --project ./Contas.Backend/Contas.Core --startup-project ./Contas.Backend/Contas.Api
+
+ dotnet ef database update --project .\Contas.Core
+dotnet ef migrations add NOME_DA_MIGRATION --project .\Contas.Core
+
+ef migrations remove

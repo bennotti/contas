@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<appSettings>
+  <add key="MySqlConfig" value="Server=localhost;Database=database;Uid=root;Pwd=root"/>
+</appSettings>
