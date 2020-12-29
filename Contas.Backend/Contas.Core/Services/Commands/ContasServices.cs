@@ -288,7 +288,7 @@ namespace Contas.Core.Services.Commands
             ContaResultViewModel result = null;
             try
             {
-                var dados = await _db.Contas.FirstOrDefaultAsync(p => p.Ativo);
+                var dados = await _db.Contas.FirstOrDefaultAsync(p => p.ContaId == contaId && p.Ativo);
 
                 if (dados == null)
                 {
